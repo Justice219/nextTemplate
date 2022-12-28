@@ -1,0 +1,20 @@
+@use "../../util/shared";
+
+// Root element of your component, which component are we styling?
+$ROOT: shared.makeRoot("IndexPageComponent");
+// The function used to target a specific element of the component.
+@function el($name) {
+  @return shared.makeSubElementName($ROOT, $name);
+}
+
+#{$ROOT} {
+  @apply bg-black min-h-screen w-full p-0 m-0;
+}
+
+#{el('body')} {
+    @apply text-white;
+}
+
+#{el('title')} {
+  @apply text-white;
+}

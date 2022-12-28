@@ -1,0 +1,1 @@
+export { IndexPageComponent } from './IndexPageComponent';
